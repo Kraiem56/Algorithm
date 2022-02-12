@@ -1,0 +1,23 @@
+ALGORITHM PHRASE
+VAR
+    phrase:STRING
+    i:INTEGER=0;
+    l:INTEGER=0;
+    n_words:INTEGER=0;
+    n_vowels:INTEGER=0;
+BEGIN
+write("write a phrase:");
+read(phrase);
+l:=phrase.length
+FOR i FROM 0 TO phrase.length-1 STEP 1  DO
+   IF (phrase[i]==" " or phrase[i]==".") THEN
+       n_words++;
+   END_IF
+    IF (phrase[i]==["a","e","y","u","i","o","A","E","Y","U","I","O"]) THEN
+       n_vowels++;
+   END_IF
+END_FOR
+    write("length of the sentence l=",l);
+    write("number of words in the sentence n_words=",n_words);
+    write("number of vowels in the sentence",n_vowels);
+END
